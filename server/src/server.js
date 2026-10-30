@@ -12,6 +12,13 @@ if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 32) {
 }
 await connectDB();
 const app = createApp();
+// Health check
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "CafePOS Backend is running successfully!",
+    status: "OK"
+  });
+});
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: { origin: (process.env.CLIENT_ORIGIN || 'http://localhost:5173').split(',').map(s => s.trim()) }
