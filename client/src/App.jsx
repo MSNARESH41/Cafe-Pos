@@ -10,6 +10,7 @@ function Login({ onLogin }) {
   const [password, setPassword] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const[showPassword, setShowPassword] = useState(false);
   async function submit(e) {
     e.preventDefault(); setBusy(true); setError('');
     try {
@@ -23,7 +24,24 @@ function Login({ onLogin }) {
     <h1>Welcome to CafePOS</h1><p className="muted">Sign in to manage orders, menu and billing.</p>
     {error && <div className="alert">{error}</div>}
     <label>Email<input type="email" autoComplete="username" required value={email} onChange={e => setEmail(e.target.value)} /></label>
-    <label>Password<input type="password" autoComplete="current-password" required value={password} onChange={e => setPassword(e.target.value)} /></label>
+    <label>Password
+  <div className="password-wrapper">
+    <input
+      type={showPassword ? "text" : "password"}
+      autoComplete="current-password"
+      required
+      value={password}
+      onChange={e => setPassword(e.target.value)}/>
+
+    <button
+      type="button"
+      className="password-toggle"
+      onClick={() => setShowPassword(!showPassword)}>
+      {showPassword ? "🙈" : "👁️"}
+
+    </button>
+  </div>
+</label>
     <button className="primary full" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
     <p className="hint">Use the admin credentials configured in server/.env.</p>
   </form></main>;
