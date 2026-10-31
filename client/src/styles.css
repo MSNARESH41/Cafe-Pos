@@ -4,3 +4,27 @@
 @media(max-width:1200px){.main{padding:0 23px}.sidebar{width:215px}.main{margin-left:215px}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pos-layout{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-add-form{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-add-form button{grid-column:span 2}}
 @media(max-width:850px){.sidebar{position:static;width:100%;height:auto;padding:12px 15px;display:grid;grid-template-columns:1fr auto;align-items:center}.brand{padding:0}.sidebar .nav-label{display:none}.sidebar .nav-item{display:none}.sidebar-bottom{margin:0;padding:0;border:0}.user-details{display:none}.main{margin:0;padding:0 16px}.topbar{padding:22px 0}.topbar h1{font-size:22px}.top-actions{gap:6px}.live-dot{display:none}.pos-layout{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.welcome-panel{padding:23px}.welcome-panel .white-button{margin-right:25px}.panel{padding:16px}.menu-add-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.top-actions .primary{margin-left:auto}.stats-grid{gap:9px}.stat-card{padding:13px}.stat-top{font-size:8px}.stat-card>strong{font-size:21px}.welcome-panel{align-items:flex-start;flex-direction:column;gap:17px}.welcome-panel h2{font-size:20px}.welcome-panel .white-button{margin:0}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.food-art{height:65px}.checkout-fields,.tax-fields{gap:8px}.menu-add-form{grid-template-columns:1fr}.menu-add-form button{grid-column:auto}.main footer{flex-direction:column}.login-card{padding:25px}.cart-row{gap:6px}.qty-control{gap:4px}.line-price{font-size:9px}}
+/* Password eye icon */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #657184;
+}
